@@ -1,0 +1,21 @@
+# Maven
+target/
+
+# NetBeans
+nbproject/private/
+
+# VS Code
+.vscode/
+
+# Database credentials
+src/main/resources/db.properties
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak

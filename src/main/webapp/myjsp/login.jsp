@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus ? Sign In</title>
+<link rel="stylesheet" href="/Nexus/mycss/global.css">
+<link rel="stylesheet" href="/Nexus/mycss/login.css">
+</head>
+<body>
+<div class="auth-bg"></div>
+<div class="grid-overlay"></div>
+<div class="auth-split">
+  <!-- Left panel -->
+  <div class="auth-left">
+    <div class="auth-brand">
+      <div class="logo-mark">N</div>
+      <span class="brand-name">Nexus</span>
+    </div>
+    <div class="auth-headline">
+      <div class="eyebrow">Professional Network</div>
+      <h2>Build, Connect,<br><span class="highlight">Collaborate.</span></h2>
+      <p>The platform where talent meets opportunity. Create your portfolio, find projects that match your skills, and grow with your team.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <span class="feature-text"><strong>Portfolio-first profiles</strong> ? Showcase your real work</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="feature-text"><strong>Smart team matching</strong> ? Find the right collaborators</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <span class="feature-text"><strong>Built-in team chat</strong> ? Collaborate in real-time</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="auth-right">
+    <div class="auth-form-wrap">
+      <div class="auth-tabs">
+        <div class="auth-tab active" data-tab="login-panel">Sign In</div>
+        <div class="auth-tab" data-tab="register-panel">Create Account</div>
+      </div>
+        
+        <%
+String error =
+(String)request.getAttribute("error");
+
+if(error != null){
+%>
+
+<div class="login-error">
+
+    <%= error %>
+
+</div>
+
+<%
+}
+%>
+
+      <!-- LOGIN -->
+      <div id="login-panel" class="form-panel active">
+        <h3 class="form-title">Welcome back</h3>
+        <p class="form-subtitle">Sign in to your Nexus account</p>
+        <form id="login-form" action="/Nexus/login" method="POST" novalidate>
+          <div class="form-group">
+            <label for="login-email">Email address</label>
+            <div class="input-wrap">
+              <svg class="input-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <input id="login-email" class="input" type="email" name="email" placeholder="you@example.com">
+            </div>
+            <div class="field-error">Enter a valid email</div>
+          </div>
+          <div class="form-group">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+              <label for="login-password" style="margin:0">Password</label>
+              <a href="#" class="forgot">Forgot password?</a>
+            </div>
+            <div class="input-wrap">
+              <svg class="input-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input id="login-password" class="input" type="password" name="password" placeholder="????????" style="padding-right:40px">
+              <button type="button" class="input-toggle">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <div class="field-error">Password is required</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px;padding:13px">Sign In</button>
+        </form>
+      </div>
+
+      <!-- REGISTER -->
+      <div id="register-panel" class="form-panel">
+        <h3 class="form-title">Create account</h3>
+        <p class="form-subtitle">Join thousands of professionals on Nexus</p>
+        <form id="register-form" action="/Nexus/register" method="POST" novalidate>
+          <div class="form-group">
+            <label>I am a?</label>
+            <div class="role-grid">
+              <div class="role-card selected" data-role="student">
+                <span class="role-icon">?</span>
+                <span class="role-name">Student</span>
+                <span class="role-desc">Learning &amp; building</span>
+                <div class="role-check"><svg width="9" height="9" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              </div>
+              <div class="role-card" data-role="recruiter">
+                <span class="role-icon">?</span>
+                <span class="role-name">Recruiter</span>
+                <span class="role-desc">Finding talent</span>
+                <div class="role-check"><svg width="9" height="9" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              </div>
+              <div class="role-card" data-role="hr">
+                <span class="role-icon">?</span>
+                <span class="role-name">HR Professional</span>
+                <span class="role-desc">Team building</span>
+                <div class="role-check"><svg width="9" height="9" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              </div>
+              <div class="role-card" data-role="professional">
+                <span class="role-icon">?</span>
+                <span class="role-name">Professional</span>
+                <span class="role-desc">Expert &amp; mentor</span>
+                <div class="role-check"><svg width="9" height="9" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              </div>
+            </div>
+            <input type="hidden" name="role" value="student">
+          </div>
+          <div class="grid-2" style="margin-bottom:16px">
+            <div class="form-group" style="margin:0">
+              <input class="input" type="text" name="full_name" placeholder="Full Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email address</label>
+            <div class="input-wrap">
+              <svg class="input-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <input id="reg-email" class="input" type="email" name="email" placeholder="you@example.com">
+            </div>
+            <div class="field-error">Enter a valid email</div>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <div class="input-wrap">
+              <svg class="input-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input id="reg-password" class="input" type="password" name="password" placeholder="Min 8 characters" style="padding-right:40px">
+              <button type="button" class="input-toggle">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <div class="strength-bar"><div class="strength-seg"></div><div class="strength-seg"></div><div class="strength-seg"></div><div class="strength-seg"></div></div>
+            <div class="strength-label"></div>
+            <div class="field-error">Password required</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px;padding:13px">Create Account</button>
+          <p class="terms">By creating an account you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container"></div>
+<script>
+<script>
+
+const error =
+document.querySelector(
+".login-error"
+);
+
+if(error){
+
+document
+.querySelectorAll(
+"input"
+)
+.forEach(input=>{
+
+input.addEventListener(
+"input",
+()=>{
+
+error.style.display=
+"none";
+
+});
+
+});
+
+}
+
+</script>
+</script>
+<script src="/Nexus/myjs/login.js"></script>
+</body>
+</html>
