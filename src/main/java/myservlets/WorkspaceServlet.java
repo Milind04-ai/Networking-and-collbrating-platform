@@ -39,7 +39,7 @@ if(session == null ||
 
     response.sendRedirect(
         request.getContextPath()
-        + "/myhtml/login.html");
+        + "/login");
 
     return;
 }
@@ -137,26 +137,35 @@ if(rs.next()){
 
     project = new Project();
 
-    project.setId(
-        rs.getString("id"));
-
     project.setTitle(
-        rs.getString("title"));
+    rs.getString("title") == null
+    ? ""
+    : rs.getString("title"));
 
-    project.setDescription(
-        rs.getString("description"));
+project.setDescription(
+    rs.getString("description") == null
+    ? ""
+    : rs.getString("description"));
 
-    project.setEmoji(
-        rs.getString("emoji"));
+project.setEmoji(
+    rs.getString("emoji") == null
+    ? "📁"
+    : rs.getString("emoji"));
 
-    project.setStatus(
-        rs.getString("status"));
+project.setStatus(
+    rs.getString("status") == null
+    ? "Unknown"
+    : rs.getString("status"));
 
-    project.setTags(
-        rs.getString("tags"));
+project.setTags(
+    rs.getString("tags") == null
+    ? ""
+    : rs.getString("tags"));
 
-    project.setOwnerName(
-        rs.getString("full_name"));
+project.setOwnerName(
+    rs.getString("full_name") == null
+    ? "Unknown"
+    : rs.getString("full_name"));
 }
 
 String groupChatId = null;

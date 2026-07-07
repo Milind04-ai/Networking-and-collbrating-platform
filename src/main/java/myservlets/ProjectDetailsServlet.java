@@ -90,26 +90,35 @@ String applicationStatus = null;
                 
                 p = new Project();
 
-                p.setId(
-                    rs.getString("id"));
-
                 p.setTitle(
-                    rs.getString("title"));
+    rs.getString("title") == null
+    ? ""
+    : rs.getString("title"));
 
-                p.setDescription(
-                    rs.getString("description"));
+p.setDescription(
+    rs.getString("description") == null
+    ? ""
+    : rs.getString("description"));
 
-                p.setEmoji(
-                    rs.getString("emoji"));
+p.setEmoji(
+    rs.getString("emoji") == null
+    ? "📁"
+    : rs.getString("emoji"));
 
-                p.setStatus(
-                    rs.getString("status"));
+p.setStatus(
+    rs.getString("status") == null
+    ? "Unknown"
+    : rs.getString("status"));
 
-                p.setTags(
-                    rs.getString("tags"));
+p.setTags(
+    rs.getString("tags") == null
+    ? ""
+    : rs.getString("tags"));
 
-                p.setOwnerName(
-                    rs.getString("full_name"));
+p.setOwnerName(
+    rs.getString("full_name") == null
+    ? "Unknown"
+    : rs.getString("full_name"));
                 
                 ArrayList<ProjectMember> members =
         new ArrayList<>();

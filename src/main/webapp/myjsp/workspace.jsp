@@ -555,10 +555,18 @@ boolean mine =
 <div class="skills-container">
 
 <%
-String[] tags =
-project.getTags().split(",");
+String tagsText = project.getTags();
+
+if(tagsText == null){
+    tagsText = "";
+}
+
+String[] tags = tagsText.split(",");
 
 for(String tag : tags){
+
+    if(tag.trim().isEmpty())
+        continue;
 %>
 
     <span class="skill-tag">

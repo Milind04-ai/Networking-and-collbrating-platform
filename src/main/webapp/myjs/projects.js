@@ -108,7 +108,37 @@ if(p.ownerId === currentUserId){
     "detail-team"
 ).innerHTML =
     p.teamHtml;
-}function selectProject(id){selectedId=id;document.querySelectorAll('.project-card').forEach(c=>{c.classList.toggle('selected',parseInt(c.dataset.id)===id);});renderDetail(id);const panel=document.querySelector('.detail-panel');panel.style.animation='none';panel.offsetHeight;panel.style.animation='fadeIn 0.25s ease';}
+    
+    document.getElementById("viewProjectBtn").href =
+    CONTEXT_PATH + "/projectDetails?id=" + p.id;
+
+document.getElementById("workspaceBtn").href =
+    CONTEXT_PATH + "/workspace?id=" + p.id;
+
+}
+
+function selectProject(id){
+
+    selectedId = id;
+
+    document.querySelectorAll(".project-card").forEach(card => {
+
+        card.classList.toggle(
+            "selected",
+            card.dataset.id === id
+        );
+    });
+
+    renderDetail(id);
+
+    const panel =
+        document.querySelector(".detail-panel");
+
+    panel.style.animation = "none";
+    panel.offsetHeight;
+    panel.style.animation = "fadeIn 0.25s ease";
+}
+
 document.addEventListener('DOMContentLoaded',()=>{renderSidebar('projects');loadNotificationCounts();renderTopbar('Projects');initRipples();initModals();initSearchShortcut();if(PROJECTS.length > 0){
 
     if(PROJECTS.length > 0){
