@@ -30,7 +30,7 @@ public class IncomingRequestsServlet extends HttpServlet {
 
             response.sendRedirect(
                 request.getContextPath()
-                + "/myhtml/login.html");
+                + "/login");
 
             return;
         }

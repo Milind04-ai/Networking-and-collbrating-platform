@@ -151,7 +151,7 @@ if(searchInput){
 
   // ── Header action buttons ──
   document.getElementById('video-btn')?.addEventListener('click', () => showToast('Video call feature coming soon', 'info'));
-  document.getElementById('profile-btn')?.addEventListener('click', () => { window.location.href = '../profile/profile.html'; });
+  document.getElementById('profile-btn')?.addEventListener('click', () => { window.location.href = '/Nexus/profile'; });
 
   // ── Mark convo as read when clicked ──
   document.querySelector('[data-convo="priya"]')?.classList.add('active');

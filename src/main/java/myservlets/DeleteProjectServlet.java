@@ -27,7 +27,7 @@ public class DeleteProjectServlet extends HttpServlet {
 
             response.sendRedirect(
                     request.getContextPath()
-                    + "/myhtml/login.html");
+                    + "/login");
 
             return;
         }

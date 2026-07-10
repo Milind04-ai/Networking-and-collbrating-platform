@@ -34,7 +34,7 @@ public class ExploreServlet extends HttpServlet {
 
             response.sendRedirect(
                 request.getContextPath()
-                + "/myhtml/login.html");
+                + "/login");
 
             return;
         }

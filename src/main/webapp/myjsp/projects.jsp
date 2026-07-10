@@ -255,7 +255,7 @@ for(String tag : tags){
       <h3>Post a New Project</h3>
       <button class="modal-close"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
-    <form id="post-project-form" action="../projects/create" method="POST">
+    <form id="post-project-form" action="/Nexus/projects/create" method="POST">
       <div style="margin-bottom:14px">
         <label>Project title</label>
         <input class="input" name="title" placeholder="e.g. EcoTrack — Sustainability Dashboard" required>

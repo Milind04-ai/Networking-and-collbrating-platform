@@ -32,7 +32,7 @@ if(session == null ||
 
     response.sendRedirect(
         request.getContextPath()
-        + "/myhtml/login.html");
+        + "/login");
 
     return;
 }

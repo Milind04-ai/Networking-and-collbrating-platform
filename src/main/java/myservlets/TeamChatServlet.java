@@ -28,7 +28,7 @@ public class TeamChatServlet extends HttpServlet {
 
             response.sendRedirect(
                     request.getContextPath()
-                    + "/myhtml/login.html");
+                    + "/login");
 
             return;
         }

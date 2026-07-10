@@ -30,7 +30,7 @@ public class ProfileServlet extends HttpServlet {
                 session.getAttribute("userId") == null){
 
             response.sendRedirect(
-        request.getContextPath() + "/myhtml/login.html");
+        request.getContextPath() + "/login");
 
             return;
         }

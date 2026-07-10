@@ -318,7 +318,7 @@ for(Project p : recentProjects){
               </div>
             </div>
             <div class="feed-actions">
-              <a href="../projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View project</a>
+              <a href="/Nexus/projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View project</a>
               <button class="feed-btn like-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> <span class="like-count">24</span> interested</button>
             </div>
           </div>
@@ -341,7 +341,7 @@ for(Project p : recentProjects){
               </div>
             </div>
             <div class="feed-actions">
-              <a href="../projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View project</a>
+              <a href="/Nexus/projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View project</a>
               <button class="feed-btn like-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> <span class="like-count">18</span> interested</button>
             </div>
           </div>
@@ -356,8 +356,8 @@ for(Project p : recentProjects){
             </div>
             <p class="feed-action">You and <span>Sana Ali</span> are now connected. Check out their portfolio.</p>
             <div style="display:flex;gap:10px;margin-top:8px">
-              <a href="../profile" class="btn btn-ghost btn-sm">View Profile</a>
-              <a href="../chat" class="btn btn-ghost btn-sm">Send Message</a>
+              <a href="/Nexus/profile" class="btn btn-ghost btn-sm">View Profile</a>
+              <a href="/Nexus/chat" class="btn btn-ghost btn-sm">Send Message</a>
             </div>
           </div>
 
@@ -371,7 +371,7 @@ for(Project p : recentProjects){
             </div>
             <p class="feed-action">SmartHire just crossed <span>500 users</span>! Looking for a data engineer to scale the pipeline.</p>
             <div class="feed-actions">
-              <a href="../projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> See project</a>
+              <a href="/Nexus/projects" class="feed-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> See project</a>
               <button class="feed-btn like-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> <span class="like-count">41</span> claps</button>
             </div>
           </div>
@@ -529,7 +529,7 @@ for(Application app : recentApplications){
           <div class="widget" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));border-color:var(--accent-glow)">
             <div style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px">? Boost your visibility</div>
             <p style="font-size:13px;color:var(--text-secondary);line-height:1.6">Adding 2+ portfolio items increases your visibility by <strong style="color:var(--text-primary)">3×</strong> in project searches.</p>
-            <a href="../profile" class="btn btn-primary btn-sm btn-full" style="margin-top:14px;justify-content:center">Add Portfolio Item</a>
+            <a href="/Nexus/profile" class="btn btn-primary btn-sm btn-full" style="margin-top:14px;justify-content:center">Add Portfolio Item</a>
           </div>
         </div>
       </div>

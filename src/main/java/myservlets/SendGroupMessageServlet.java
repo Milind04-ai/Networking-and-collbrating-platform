@@ -29,7 +29,7 @@ public class SendGroupMessageServlet
 
             response.sendRedirect(
                 request.getContextPath()
-                + "/myhtml/login.html");
+                + "/login");
 
             return;
         }

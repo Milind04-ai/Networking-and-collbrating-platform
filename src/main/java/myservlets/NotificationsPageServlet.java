@@ -29,7 +29,7 @@ public class NotificationsPageServlet
 
             response.sendRedirect(
                 request.getContextPath()
-                + "/myhtml/login.html");
+                + "/login");
 
             return;
         }

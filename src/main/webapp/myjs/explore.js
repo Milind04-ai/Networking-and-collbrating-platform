@@ -22,7 +22,7 @@ function renderPeople(data) {
   const grid = document.getElementById('people-grid');
   if (!data.length) { grid.innerHTML = `<div class="no-results" style="grid-column:1/-1"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><p>No people found matching your filters</p></div>`; return; }
   grid.innerHTML = data.map(p => `
-    <a class="person-card" href="../profile/profile.html">
+    <a class="person-card" href="/Nexus/profile">
       <div class="avatar" style="background:${p.color};width:56px;height:56px;font-size:20px;margin:0 auto 12px">${p.init}</div>
       <div class="person-name">${p.name}</div>
       <div class="person-headline">${p.headline}</div>
@@ -36,7 +36,7 @@ function renderProjects(data) {
   const grid = document.getElementById('project-results-grid');
   if (!data.length) { grid.innerHTML = `<div class="no-results" style="grid-column:1/-1"><p>No projects found</p></div>`; return; }
   grid.innerHTML = data.map(p => `
-    <a class="exp-project-card" href="../projects/projects.html">
+    <a class="exp-project-card" href="/Nexus/projects">
       <div class="epc-head">
         <div class="epc-emoji">${p.emoji}</div>
         <div><div class="epc-title">${p.title}</div><div class="epc-owner">by ${p.owner}</div></div>

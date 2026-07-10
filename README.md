@@ -163,7 +163,7 @@ db.password=your_password
 
 ### Workspace
 
-*(Add screenshot here)*
+![workspace](screenshots/workspace.png)
 
 ---
 

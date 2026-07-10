@@ -28,7 +28,7 @@ public class ApplyProjectServlet extends HttpServlet {
 
             response.sendRedirect(
                     request.getContextPath()
-                    + "/myhtml/login.html");
+                    + "/login");
 
             return;
         }
