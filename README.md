@@ -137,7 +137,39 @@ db.password=your_password
 
 ## Screenshots
 
-Coming Soon
+### Login
+
+![login](screenshots/login.png)
+
+---
+
+### Dashboard
+
+![dashboard](screenshots/dashboard.png)
+
+---
+
+### Explore Projects
+
+![explore](screenshots/explore.png)
+
+---
+
+### Project Details
+
+![projects](screenshots/projects.png)
+
+---
+
+### Workspace
+
+*(Add screenshot here)*
+
+---
+
+### User Profile
+
+![profile](screenshots/profile.png)
 
 ---
 
