@@ -25,44 +25,44 @@ public class Application {
     public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
+    
+    public void setApplicantId(String applicantId) {
+        this.applicantId = applicantId;
+    }
 
     public String getApplicantId() {
         return applicantId;
     }
-
-    public void setApplicantId(String applicantId) {
-        this.applicantId = applicantId;
+    
+    public void setApplicantName(String applicantName) {
+        this.applicantName = applicantName;
     }
 
     public String getApplicantName() {
         return applicantName;
     }
-
-    public void setApplicantName(String applicantName) {
-        this.applicantName = applicantName;
+    
+    public void setProjectTitle(String projectTitle) {
+        this.projectTitle = projectTitle;
     }
 
     public String getProjectTitle() {
         return projectTitle;
     }
-
-    public void setProjectTitle(String projectTitle) {
-        this.projectTitle = projectTitle;
+    
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public String getMessage() {
         return message;
     }
-
-    public void setMessage(String message) {
-        this.message = message;
+    
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

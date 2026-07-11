@@ -227,7 +227,7 @@ for(User u : users){
           <div id="section-projects">
             <div class="results-header">
               <h2>Projects <span style="font-size:14px;color:var(--text-muted);font-weight:400">· <span id="project-count">4</span> open</span></h2>
-              <a href="<%=request.getContextPath()%>projects" style="font-size:13px;color:var(--accent);text-decoration:none">See all →</a>
+              <a href="<%=request.getContextPath()%>/projects" style="font-size:13px;color:var(--accent);text-decoration:none">See all →</a>
             </div>
             <div class="project-results-grid">
 

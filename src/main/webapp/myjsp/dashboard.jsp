@@ -104,7 +104,7 @@ Let's make today productive ?
 
 <div class="quick-actions">
 
-    <a href="<%=request.getContextPath()%>/projects/create"
+    <a href="<%=request.getContextPath()%>/myjsp/createProject.jsp"
        class="action-card">
 
         <div>
@@ -130,7 +130,7 @@ Let's make today productive ?
 
     </a>
 
-    <a href="<%=request.getContextPath()%>/messages"
+    <a href="<%=request.getContextPath()%>/chat"
        class="action-card">
 
         <div>

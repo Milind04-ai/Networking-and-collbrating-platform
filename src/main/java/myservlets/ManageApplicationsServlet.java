@@ -44,7 +44,7 @@ public class ManageApplicationsServlet extends HttpServlet {
 
             String sql =
                 "SELECT a.id, a.status, " +
-                "p.title, u.full_name " +
+                "p.title, a.applicant_id , u.full_name " +
                 "FROM applications a " +
                 "JOIN projects p " +
                 "ON a.project_id = p.id " +
@@ -79,6 +79,9 @@ while(rs.next()){
 
     a.setStatus(
         rs.getString("status"));
+    
+    a.setApplicantId(
+            rs.getString("applicant_id"));
 
     apps.add(a);
 }
