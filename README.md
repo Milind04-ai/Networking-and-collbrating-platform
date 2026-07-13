@@ -143,6 +143,12 @@ db.password=your_password
 
 ---
 
+### Register
+
+![register](ScreenShot/register.png)
+
+---
+
 ### Dashboard
 
 ![dashboard](ScreenShot/dashboard.png)
@@ -170,6 +176,30 @@ db.password=your_password
 ### User Profile
 
 ![profile](ScreenShot/profile.png)
+
+---
+
+### Chat
+
+![chat](ScreenShot/chat.png)
+
+---
+
+### Manage Applications
+
+![manageapplications](ScreenShot/manageapplications.png)
+
+---
+
+### My Applications
+
+![myapplications](ScreenShot/myapplications.png)
+
+---
+
+### Network
+
+![network](ScreenShot/network.png)
 
 ---
 
