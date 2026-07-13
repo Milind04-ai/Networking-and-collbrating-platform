@@ -139,7 +139,7 @@ db.password=your_password
 
 ### Login
 
-![login](screenshots/login.png)
+![login](ScreenShot/login.png)
 
 ---
 
