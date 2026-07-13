@@ -145,31 +145,31 @@ db.password=your_password
 
 ### Dashboard
 
-![dashboard](screenshots/dashboard.png)
+![dashboard](ScreenShot/dashboard.png)
 
 ---
 
 ### Explore Projects
 
-![explore](screenshots/explore.png)
+![explore](ScreenShot/explore.png)
 
 ---
 
 ### Project Details
 
-![projects](screenshots/projects.png)
+![projects](ScreenShot/projects.png)
 
 ---
 
 ### Workspace
 
-![workspace](screenshots/workspace.png)
+![workspace](ScreenShot/workspace.png)
 
 ---
 
 ### User Profile
 
-![profile](screenshots/profile.png)
+![profile](ScreenShot/profile.png)
 
 ---
 
