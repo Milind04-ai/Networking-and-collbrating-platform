@@ -73,7 +73,7 @@ renderSidebar('dashboard');
 
   // ── Project preview click ──
   document.querySelectorAll('.project-preview').forEach(card => {
-    card.addEventListener('click', () => { window.location.href = '../myhtml/projects.html'; });
+    card.addEventListener('click', () => { window.location.href = '/Nexus/projects'; });
   });
 
   // ── Live dot pulse ──
