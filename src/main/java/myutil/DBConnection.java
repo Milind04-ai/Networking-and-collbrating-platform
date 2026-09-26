@@ -12,57 +12,75 @@ public class DBConnection {
     private static String PASSWORD;
 
     static {
-
         try {
 
             Properties props = new Properties();
 
             InputStream input =
                     DBConnection.class
-                    .getClassLoader()
-                    .getResourceAsStream("db.properties");
+                            .getClassLoader()
+                            .getResourceAsStream("db.properties");
 
-            if(input == null){
-
-                throw new RuntimeException(
-                        "db.properties not found");
+            // db.properties is optional
+            if (input != null) {
+                props.load(input);
+                input.close();
             }
 
-            props.load(input);
+            // Environment variables take priority
+            URL = getEnvOrProperty(
+                    "DB_URL",
+                    props.getProperty("db.url")
+            );
 
-            URL =
-                    props.getProperty("db.url");
+            USER = getEnvOrProperty(
+                    "DB_USERNAME",
+                    props.getProperty("db.username")
+            );
 
-            USER =
-                    props.getProperty("db.username");
+            PASSWORD = getEnvOrProperty(
+                    "DB_PASSWORD",
+                    props.getProperty("db.password")
+            );
 
-            PASSWORD =
-                    props.getProperty("db.password");
+            if (URL == null || USER == null || PASSWORD == null) {
+                throw new RuntimeException(
+                        "Database configuration is missing. " +
+                        "Set DB_URL, DB_USERNAME and DB_PASSWORD."
+                );
+            }
 
-            Class.forName(
-                    "com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-        }
-
-        catch(Exception e){
-
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static Connection getConnection(){
+    private static String getEnvOrProperty(
+            String envName,
+            String propertyValue) {
 
-        try{
+        String envValue = System.getenv(envName);
+
+        if (envValue != null && !envValue.trim().isEmpty()) {
+            return envValue;
+        }
+
+        return propertyValue;
+    }
+
+    public static Connection getConnection() {
+
+        try {
 
             return DriverManager.getConnection(
-
                     URL,
                     USER,
                     PASSWORD
-
             );
 
-        }catch(Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
